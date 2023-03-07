@@ -1,3 +1,5 @@
+package service;
+
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Objects;
@@ -32,7 +34,7 @@ public class PlayFair {
         int asciiValue = 65;
         int iteration = 0;
         string = string.toUpperCase();
-        string = string.replaceAll("I", "");
+        string = string.replaceAll("I", "J");
 
         int x = 0;
         int y = 0;
@@ -108,9 +110,10 @@ public class PlayFair {
     }
 
     public String bothCharsSame(String str) {
-        str = str = str.replaceAll(" ", "");
+        str = str.replaceAll(" ", "");
+        int length = str.length();
         for (int i = 0; i < str.length(); i++) {
-            if (i < str.length() - 1) {
+            if (i < length-1) {
                 if (str.charAt(i) == str.charAt(i + 1)) {
                     str = str.substring(0, i + 1) + 'X' + str.substring(i + 1);
                 }

@@ -1,4 +1,7 @@
+package test;
+
 import org.junit.jupiter.api.Test;
+import service.PlayFair;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -175,9 +178,9 @@ class PlayFairHideMessageTest {
     @Test
     public void hideMessage14Test() {
         String encryptedMessage = "";
-        String decryptedMessage = "mam pm";
+        String decryptedMessage = "XXX";
         String enctryptionKey = "mapka";
-        String trueRecord = "APAKPV";
+        String trueRecord = "YYYYYY";
 
         PlayFair szyfruj = new PlayFair();
         szyfruj.fillGaps(enctryptionKey);
@@ -224,5 +227,42 @@ class PlayFairHideMessageTest {
         assertEquals(trueRecord, encryptedMessage);
     }
 
+    @Test
+    public void hideMessage18Test() {
+        String encryptedMessage = "";
+        String decryptedMessage = "AAVV";
+        String enctryptionKey = "mapka";
+        String trueRecord = "PWMWWY";
+
+        PlayFair szyfruj = new PlayFair();
+        szyfruj.fillGaps(enctryptionKey);
+        encryptedMessage = szyfruj.hideMessage(szyfruj.bothCharsSame(decryptedMessage), encryptedMessage);
+        assertEquals(trueRecord, encryptedMessage);
+    }
+
+    @Test
+    public void hideMessage19Test() {
+        String encryptedMessage = "";
+        String decryptedMessage = "kopalniawegla";
+        String enctryptionKey = "mijadzien";
+        String trueRecord = "LGRMHCADUBHODW";
+
+        PlayFair szyfruj = new PlayFair();
+        szyfruj.fillGaps(enctryptionKey);
+        encryptedMessage = szyfruj.hideMessage(szyfruj.bothCharsSame(decryptedMessage), encryptedMessage);
+        assertEquals(trueRecord, encryptedMessage);
+    }
+    @Test
+    public void hideMessage20Test() {
+        String encryptedMessage = "";
+        String decryptedMessage = "politechnikapoznanska";
+        String enctryptionKey = "tomaszimaja";
+        String trueRecord = "NMNZZLHQVFHSNMJLOQDRCA";
+
+        PlayFair szyfruj = new PlayFair();
+        szyfruj.fillGaps(enctryptionKey);
+        encryptedMessage = szyfruj.hideMessage(szyfruj.bothCharsSame(decryptedMessage), encryptedMessage);
+        assertEquals(trueRecord, encryptedMessage);
+    }
 
 }
