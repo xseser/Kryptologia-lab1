@@ -1,0 +1,51 @@
+li { list-style-type: square }
+
+
+#cena_style{
+    color: red;
+    font-weight: bold
+}
+
+.wstep{
+     font-style: italic;
+}
+
+#autor{
+    letter-spacing: 5px
+}
+
+#opis{
+    font-size: small
+}
+
+#zdjecie:hover{
+     border-style: solid;
+     border-color: red;
+}
+
+#zdjecie{
+    border-style: solid;
+    border-color: blue;
+}
+
+p+p{
+    color: gray;
+}
+
+
+#body_style{
+    background-image: url(https://e1.pngegg.com/pngimages/157/2/png-clipart-free-cartoon-s-bang-art.png);
+    background-repeat: no-repeat;
+    background-size: 700px;
+}
+
+
+
+h1 { color: blue }
+h1 { color: green }
+/*h1 { color: yellow }
+h1 { color: yellow !important }.
+ */
+
+/* zostal wykonany kolor zielony */
+
